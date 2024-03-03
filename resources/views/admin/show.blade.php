@@ -113,8 +113,10 @@
                                 <center>
                                     {{  $kegiatans->withQueryString()->links() }}
                                 </center>
-                                <a href="{{ route('admin.pdf', $kegiatans->id) }}" target="_blank" class="btn btn-outline-secondary">Print</a>
-                            </div>
+                                @if (!$kegiatans->isEmpty())
+										<a href="{{ route('admin.pdf', $kegiatans->first()->user_id) }}" target="_blank" class="btn btn-outline-secondary">Print</a>
+									@endif                            
+                                </div>
                         </div>
                     </div>
 

@@ -63,11 +63,7 @@
                             <div class="table-responsive">
                                 <form action="{{ route('user.update', $kegiatan->id) }}" method="POST">
                                     @method('PUT')
-                                    @csrf
-                                    <div class="form-group">
-                                        <label for="exampleFormControlInput1">Nama:</label>
-                                        <input type="text" name="name" class="form-control" id="exampleFormControlInput1" value="{{ old('name', $kegiatan->name) }}">
-                                      </div>                                                              
+                                    @csrf                                                           
                                     <div class="form-group">
                                       <label for="exampleFormControlInput1">Tanggal:</label>
                                       <input type="date" name="tanggal" class="form-control" id="exampleFormControlInput1" value="{{ old('tanggal', $kegiatan->tanggal) }}">
